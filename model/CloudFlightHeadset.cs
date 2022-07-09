@@ -14,8 +14,8 @@ namespace CloudFlightMonitor.model
             List<HIDInfo> allDevs = HIDBrowse.Browse();
             allDevs.ForEach(x => Console.WriteLine("{0} - {1} - {2} - {3} - {4} - {5}", x.Manufacturer, x.Path, x.Product, x.SerialNumber, x.Pid, x.Vid));
             Console.WriteLine("CONSTRUCTOR: Scanning matching devices...");
-            List<HIDInfo> devs = allDevs.FindAll(x => x.Pid == 5923 && x.Vid == 2385);
-            List<HIDInfo> chargingDevs = allDevs.FindAll(x => x.Pid == 5925 && x.Vid == 2385);
+            List<HIDInfo> devs = allDevs.FindAll(x => x.Pid == 5850 && x.Vid == 2385);
+            List<HIDInfo> chargingDevs = allDevs.FindAll(x => x.Pid == 5851 && x.Vid == 2385);
 
             if (chargingDevs.Count != 0)
             {
